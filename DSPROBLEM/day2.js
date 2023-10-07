@@ -639,27 +639,43 @@
 // let s ="leetcode"
 // console.log(maxPower(s));
 
-/**
- * @param {string} s
- * @return {string}
- */
-var sortString = function(s) {
-  let res = '';
-  let ss = s.split('');
-  console.log(ss);
-  let unique = [...new Set(ss)].sort();
-  console.log(unique);
-  while (ss.length > 0) {
-      for (let i = 0; i < unique.length; i++) {
-          const index = ss.indexOf(unique[i]);
-          if (index !== -1) {
-              res += unique[i];
-              ss.splice(index, 1);
-          }
-      }
-      unique = unique.reverse();
-  }
-  return res;
-};
-let s = "aaaabbbbcccc"
-console.log(sortString(s));
+// /**
+//  * @param {string} s
+//  * @return {string}
+//  */
+// var sortString = function(s) {
+//   let res = '';
+//   let ss = s.split('');
+//   console.log(ss);
+//   let unique = [...new Set(ss)].sort();
+//   console.log(unique);
+//   while (ss.length > 0) {
+//       for (let i = 0; i < unique.length; i++) {
+//           const index = ss.indexOf(unique[i]);
+//           if (index !== -1) {
+//               res += unique[i];
+//               ss.splice(index, 1);
+//           }
+//       }
+//       unique = unique.reverse();
+//   }
+//   return res;
+// };
+// let s = "aaaabbbbcccc"
+// console.log(sortString(s));
+
+// frequency of numbers
+
+// function arrayfreq(){
+//  let map =new Map
+//  for(let i=0;i<arr1.length;i++){
+//  if(map.has(arr1[i])){
+//   map.set(arr1[i],map.get(arr1[i])+ 1)
+//  }else{
+//   map.set(arr1[i],1)
+//  }
+//  }
+//  return map
+// }
+// let arr1=[1,1,2,3,1,5,6,6,5]
+// console.log(arrayfreq(arr1));j
