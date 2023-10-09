@@ -258,6 +258,19 @@
 //     }
 // let  date = "6th Jun 1933"
 // console.log(reformatDate(date));
+ // count numbers
+ 
+ // 1523
+ var countOdds = function(low, high) {
+    let arr=[]
+    for(let i=low;i<=high;i++){
+        if(i%2!==0){
+            arr.push(i)
+        }
+    }
+    return arr
+};
+let low = 3;
 
-
-//
+let high = 7
+console.log(countOdds(low,high));
