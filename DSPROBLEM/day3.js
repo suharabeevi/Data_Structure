@@ -261,16 +261,34 @@
  // count numbers
  
  // 1523
- var countOdds = function(low, high) {
-    let arr=[]
-    for(let i=low;i<=high;i++){
-        if(i%2!==0){
-            arr.push(i)
+//  var countOdds = function(low, high) {
+//     let arr=[]
+//     for(let i=low;i<=high;i++){
+//         if(i%2!==0){
+//             arr.push(i)
+//         }
+//     }
+//     return arr
+// };
+// let low = 3;
+
+// let high = 7
+// console.log(countOdds(low,high));
+
+var thousandSeparator = function(n) {
+    const numArr = String(n).split('');
+    let len = numArr.length;
+    if(len > 3){
+        for(let i = len,k=0; i>0;i--,k++){
+            
+            if( k % 3 === 0 && k !== 0){
+               
+                numArr.splice(i,0,".");
+            }
         }
     }
-    return arr
+    return numArr.join("")
+    
 };
-let low = 3;
-
-let high = 7
-console.log(countOdds(low,high));
+let n = 398788888888888;
+console.log(thousandSeparator(n));
