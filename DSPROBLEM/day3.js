@@ -275,20 +275,57 @@
 // let high = 7
 // console.log(countOdds(low,high));
 
-var thousandSeparator = function(n) {
-    const numArr = String(n).split('');
-    let len = numArr.length;
-    if(len > 3){
-        for(let i = len,k=0; i>0;i--,k++){
+// var thousandSeparator = function(n) {
+//     const numArr = String(n).split('');
+//     let len = numArr.length;
+//     if(len > 3){
+//         for(let i = len,k=0; i>0;i--,k++){
             
-            if( k % 3 === 0 && k !== 0){
+//             if( k % 3 === 0 && k !== 0){
                
-                numArr.splice(i,0,".");
-            }
-        }
-    }
-    return numArr.join("")
+//                 numArr.splice(i,0,".");
+//             }
+//         }
+//     }
+//     return numArr.join("")
     
+// };
+// let n = 398788888888888;
+// console.log(thousandSeparator(n));
+
+// var sumOddLengthSubarrays = function(arr) {
+//     let array=[]
+//       if(arr.length>1){
+//            array=[...arr]
+//   };
+// }
+// let arr=[1,4,2,5,3]
+
+// var sumOddLengthSubarrays = function(arr) {
+//     let output = 0;
+
+//     for (let i = 1; i <= arr.length; i += 2) {
+//         for (let j = 0; j <= arr.length - i; j++) {
+//             for (let k = 0; k < i; k++) {
+//               output += arr[j + k];
+//             }
+//         }
+//     }
+
+//     return output;
+// };
+// let arr =[1,4,2,5,3]
+// console.log(sumOddLengthSubarrays(arr));
+
+var reorderSpaces = function(text) {
+    let count=0
+   for(let i=0;i<text.length;i++){
+    if(text[i]===' '){
+        count++
+    }
+    
+   }
+   return count
 };
-let n = 398788888888888;
-console.log(thousandSeparator(n));
+let text = "  this   is  a sentence "
+console.log(reorderSpaces(text));

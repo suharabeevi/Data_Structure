@@ -678,4 +678,39 @@
 //  return map
 // }
 // let arr1=[1,1,2,3,1,5,6,6,5]
-// console.log(arrayfreq(arr1));j
+// console.log(arrayfreq(arr1));
+// 1608
+
+// var getRow = function(rowIndex)  {
+//   if (rowIndex < 0) {
+//     return [];
+// }
+// let row = [1];
+// for (let i = 1; i <= rowIndex; i++) {
+//     let nextRow = [1];
+//     for (let j = 1; j < row.length; j++) {
+//       console.log(row[j - 1] + row[j]);
+//         nextRow.push(row[j - 1] + row[j]);
+//     }
+//     nextRow.push(1);
+//     row = nextRow;
+// }
+// return row;
+// };
+// let rowIndex = 2
+// console.log(getRow(rowIndex));
+// var reorderSpaces = function(text) {
+//   let words = text.trim().split(/\s+/);
+//   console.log(words);
+//   let cntWords = words.length;
+//   let spaces = text.split("").filter(word => word == " ");
+//   let countSpaces = spaces.length;
+//   let gap = Math.floor(countSpaces / (cntWords - 1));
+//   if(cntWords > 1){
+//       return words.join(" ".repeat(gap)) + ' '.repeat(countSpaces - ((cntWords-1) * gap));
+//   }else{
+//       return words.join(" ")+' '.repeat(countSpaces);
+//   }
+// };
+// let text = "  this   is  a sentence "
+// console.log(reorderSpaces(text));
