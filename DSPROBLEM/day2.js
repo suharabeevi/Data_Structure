@@ -714,3 +714,18 @@
 // };
 // let text = "  this   is  a sentence "
 // console.log(reorderSpaces(text));
+
+// frequency of numbers
+// function frequencyofnumbers(array){
+//   let map = new Map
+//   for(let i=0;i<array.length;i++){
+//     if(map.has(array[i])){
+//       map.set(array[i],map.get(array[i])+1)
+//     }else{
+//       map.set(array[i],1)
+//     }
+//   }
+//   return map
+// }
+// let array=[1,2,2,3,4,4,1,2,3]
+// console.log(frequencyofnumbers(array));
