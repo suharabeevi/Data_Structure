@@ -729,3 +729,25 @@
 // }
 // let array=[1,2,2,3,4,4,1,2,3]
 // console.log(frequencyofnumbers(array));
+//leetcode question 1668
+// var maxRepeating = function(sequence, word) {
+//   let count = 0 ;
+//   let subString = word;
+//   while(sequence.includes(subString)){
+//       count++;
+//       subString += word
+      
+//   }
+//   return count;
+// };
+// let sequence = "ababcacbac";
+// let  word = "ac"
+// console.log(maxRepeating(sequence,word));
+//leetcode 1672
+
+var maximumWealth = function(accounts) {
+    let accounts1=accounts.map(x=>x.reduce((acc,val)=>acc+val,0))
+    return Math.max(...accounts1)
+};
+let accounts = [[1,2,3],[3,2,1]]
+console.log(maximumWealth(accounts));

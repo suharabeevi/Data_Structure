@@ -329,21 +329,21 @@
 // let text = "  this   is  a sentence "
 // console.log(reorderSpaces(text));
 // leet code question no 1646
-var getMaximumGenerated = function(n) {
-    if(n===0){
-        return 0
-    }
-    let numbers = [0,1]
-    for (let i = 1; i<numbers.length; i++){
-        if(2 <= 2*i && 2*i <= n){
-            numbers[2*i] = numbers[i]
-        }
-        if(2 <= 2*i+1 && 2*i+1 <= n){
-            numbers[2*i+1] = numbers[i]+numbers[i+1]
-        }
-    }
-    console.log(numbers);
-    return Math.max(...numbers);
-};
-let n = 30
-console.log(getMaximumGenerated(n));
+// var getMaximumGenerated = function(n) {
+//     if(n===0){
+//         return 0
+//     }
+//     let numbers = [0,1]
+//     for (let i = 1; i<numbers.length; i++){
+//         if(2 <= 2*i && 2*i <= n){
+//             numbers[2*i] = numbers[i]
+//         }
+//         if(2 <= 2*i+1 && 2*i+1 <= n){
+//             numbers[2*i+1] = numbers[i]+numbers[i+1]
+//         }
+//     }
+//     console.log(numbers);
+//     return Math.max(...numbers);
+// };
+// let n = 30
+// console.log(getMaximumGenerated(n));
