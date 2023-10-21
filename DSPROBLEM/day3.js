@@ -348,43 +348,61 @@
 // let n = 30
 // console.log(getMaximumGenerated(n));
 
-var halvesAreAlike = function(s) {
-    // Create arrays to store the first and second halves of the string
-    let array1 = [];
-    let array2 = [];
-    // Create counters for counting vowels in each half
-    let count1 = 0;
-    let count2 = 0;
+// var halvesAreAlike = function(s) {
+//     // Create arrays to store the first and second halves of the string
+//     let array1 = [];
+//     let array2 = [];
+//     // Create counters for counting vowels in each half
+//     let count1 = 0;
+//     let count2 = 0;
 
-    // Define an array of vowels
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
+//     // Define an array of vowels
+//     let vowels = ['a', 'e', 'i', 'o', 'u'];
 
-    // Convert the input string to an array of characters
-    s = s.toLowerCase(); // Make the string lowercase to handle both uppercase and lowercase vowels
-    s = s.split("");
+//     // Convert the input string to an array of characters
+//     s = s.toLowerCase(); // Make the string lowercase to handle both uppercase and lowercase vowels
+//     s = s.split("");
 
-    for (let i = 0; i < s.length; i++) {
-        // Check if the character is in the first or second half
-        if (i < s.length / 2) {
-            array1.push(s[i]);
-            // Check if the character is a vowel and increment the counter if it is
-            if (vowels.includes(s[i])) {
-                count1++;
-            }
-            console.log(count1);
-        } else {
-            array2.push(s[i]);
-            if (vowels.includes(s[i])) {
-                count2++;
-            }
-            console.log(count2);
-        }
-    }
-    console.log(array1,array2);
-console.log(count1,count2);
-    // Check if the counts of vowels in both halves are equal
-    return count1 === count2;
-};
+//     for (let i = 0; i < s.length; i++) {
+//         // Check if the character is in the first or second half
+//         if (i < s.length / 2) {
+//             array1.push(s[i]);
+//             // Check if the character is a vowel and increment the counter if it is
+//             if (vowels.includes(s[i])) {
+//                 count1++;
+//             }
+//             console.log(count1);
+//         } else {
+//             array2.push(s[i]);
+//             if (vowels.includes(s[i])) {
+//                 count2++;
+//             }
+//             console.log(count2);
+//         }
+//     }
+//     console.log(array1,array2);
+// console.log(count1,count2);
+//     // Check if the counts of vowels in both halves are equal
+//     return count1 === count2;
+// };
 
-let s = "book";
-console.log(halvesAreAlike(s));
+// let s = "book";
+// console.log(halvesAreAlike(s));
+// second largest number
+
+
+function  secondlargest(array){
+ let largest = -Infinity
+ let secondlargest= -Infinity
+ for(let i=0;i<array.length;i++){
+      if(array[i]>largest){
+        secondlargest=largest;
+        largest=array[i]
+      }else if(array[i]>secondlargest && array[i]!==largest){
+        secondlargest=array[i]
+      }
+ }
+return secondlargest
+}
+let array=[12,5,8,7,45,56]
+console.log(secondlargest(array));
