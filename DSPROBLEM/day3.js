@@ -385,24 +385,23 @@
 //     // Check if the counts of vowels in both halves are equal
 //     return count1 === count2;
 // };
-
 // let s = "book";
 // console.log(halvesAreAlike(s));
-// second largest number
+// $$$$$$$$$$$$$$$$$$$$$$$$$$   second largest number $$$$$$$$$$$$$$$$$$$$$$$$$$//
 
 
-function  secondlargest(array){
- let largest = -Infinity
- let secondlargest= -Infinity
- for(let i=0;i<array.length;i++){
-      if(array[i]>largest){
-        secondlargest=largest;
-        largest=array[i]
-      }else if(array[i]>secondlargest && array[i]!==largest){
-        secondlargest=array[i]
-      }
- }
-return secondlargest
-}
-let array=[12,5,8,7,45,56]
-console.log(secondlargest(array));
+// function  secondlargest(array){
+//  let largest = -Infinity
+//  let secondlargest= -Infinity
+//  for(let i=0;i<array.length;i++){
+//       if(array[i]>largest){
+//         secondlargest=largest;
+//         largest=array[i]
+//       }else if(array[i]>secondlargest && array[i]!==largest){
+//         secondlargest=array[i]
+//       }
+//  }
+// return secondlargest
+// }
+// let array=[12,5,8,7,45,56]
+// console.log(secondlargest(array));
