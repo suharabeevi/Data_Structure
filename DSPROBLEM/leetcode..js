@@ -16,21 +16,20 @@
 
 //1716 leetcode 
 
-function countIncrements(n) {
-    let day =0;
-    let lBank=0
-  for(let i =0 ; i <n ; i ++ ){
-      for (let j =1 ; j  <= 7 ; j++){
-          lBank += i + j;
-          day++
-          if ( day === n ){
-              return lBank;
-          }
-      }
-  }
-}
-
-// Example usage:
-let n = 10; // Replace this with the desired value of n
-let result = countIncrements(n);
-console.log(result);
+// function countIncrements(n) {
+//     let day =0;
+//     let lBank=0
+//   for(let i =0 ; i <n ; i ++ ){
+//       for (let j =1 ; j  <= 7 ; j++){
+//           lBank += i + j;
+//           day++
+//           if ( day === n ){
+//               return lBank;
+//           }
+//       }
+//   }
+// }
+// // Example usage:
+// let n = 10; // Replace this with the desired value of n
+// let result = countIncrements(n);
+// console.log(result);

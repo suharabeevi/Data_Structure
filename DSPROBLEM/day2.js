@@ -736,7 +736,6 @@
 //   while(sequence.includes(subString)){
 //       count++;
 //       subString += word
-      
 //   }
 //   return count;
 // };
@@ -750,3 +749,50 @@
 // };
 // let accounts = [[1,2,3],[3,2,1]]
 // console.log(maximumWealth(accounts));
+//question 1758
+// var minOperations = function(s) {
+//     let s =s.split("")
+//     for(let i=0;i<=s.length;i++){
+//       if(s[i]===s[i+1]){
+//        if(s[i]===0||1)
+//       }
+// };
+// }
+// let s = "0100"
+// function minOperations(nums) {
+//    let operations = 0;
+//    for (let i = 1; i < nums.length; i++) {
+//      if (nums[i] <= nums[i - 1]) {
+//       operations += nums[i - 1] - nums[i] + 1;
+//       nums[i] = nums[i - 1] + 1;
+//     }
+//   }
+//   return operations;
+// }
+// let nums = [1,1,1]
+// console.log(minOperations(nums));
+// var sumBase = function(n, k) {
+//     let sum =0
+//     while(n>0){
+//       sum = sum+n%k
+//       n = Math.floor(n/k)
+//     }
+//     return sum
+// };
+// let n = 10;
+// let  k = 10
+// console.log(sumBase(n,k));
+
+// find the largest odd number 
+
+// function largestoddnum(num){
+//      num.split("")
+//      for(i=num.length-1;i>=0;i++){
+//        if(num[i]%2==!0){
+//         return num.substring(0,i+1)
+//        }
+//      }
+//      return ""
+// }
+// let num="52"
+// console.log(largestoddnum(num));
