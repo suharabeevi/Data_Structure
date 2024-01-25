@@ -33,3 +33,6 @@
 // let n = 10; // Replace this with the desired value of n
 // let result = countIncrements(n);
 // console.log(result);
+function abc(){
+    
+}

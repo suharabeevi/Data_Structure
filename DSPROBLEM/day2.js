@@ -782,9 +782,7 @@
 // let n = 10;
 // let  k = 10
 // console.log(sumBase(n,k));
-
 // find the largest odd number 
-
 // function largestoddnum(num){
 //      num.split("")
 //      for(i=num.length-1;i>=0;i++){
@@ -796,3 +794,173 @@
 // }
 // let num="52"
 // console.log(largestoddnum(num));
+// function abc(array){
+//   let map=new Map()
+//   let array1 =[]
+//   for(let i=0;i<array.length;i++){
+//     if(map.has(array[i])){
+//       map.set(array[i],map.get(array[i])+1)
+//     }else{
+//       map.set(array[i],1)
+//     }
+//   }
+//   map.forEach((key,value)=>{
+//     if(value===1){
+//       array1.push(key)
+//     }
+//   })
+//   console.log(array1);
+// //   if(map.values===1){
+// // array1.push(map.keys)
+// //   }
+// //   console.log(array1);
+  
+// }
+// let array=[1,2,3,2]
+// console.log(abc(array));
+// function abc(array) {
+//   return array.filter((nums)=> array.indexOf(nums)===array.lastIndexOf(nums)).reduce((acc,curr)=>acc+curr,0)
+  // let map = new Map();
+  // let array1 = [];
+
+  // for (let i = 0; i < array.length; i++) {
+  //   if (map.has(array[i])) {
+  //     map.set(array[i], map.get(array[i]) + 1);
+  //   } else {
+  //     map.set(array[i], 1);
+  //   }
+  // }
+
+  // map.forEach((value, key) => {
+  //   if (value === 1) {
+  //     array1.push(key);
+  //   }
+  // });
+
+  // console.log(array1);
+// }
+
+// let array = [1, 2, 3, 2];
+// console.log(abc(array))
+
+
+// function sumOfUniqueElements(arr) {
+//   // Use a Set to store unique elements
+//   const uniqueSet = new Set();
+
+//   // Use an object to keep track of element occurrences
+//   const elementOccurrences = {};
+
+//   // Iterate through the array
+//   for (let element of arr) {
+//     // Check if the element is already in the set (ignoring duplicates)
+//     if (!elementOccurrences.hasOwnProperty(element)) {
+//       uniqueSet.add(element);
+//       elementOccurrences[element] = true;
+//     }
+//   }
+
+//   // Calculate the sum of unique elements
+//   let sum = 0;
+//   uniqueSet.forEach((element) => {
+//     sum += element;
+//   });
+
+//   return sum;
+// }
+
+// // Example usage
+// const array = [1, 2, 3, 4, 2, 3, 5];
+// const result = sumOfUniqueElements(array);
+// console.log(result); // Output: 6 (1 + 5)
+// function sumOfUniqueElements(arr) {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let isUnique = true;
+//     for (let j = 0; j < arr.length; j++) {
+//       if (i !== j && arr[i] === arr[j]) {
+//         isUnique = false;
+//         break;
+//       }
+//     }
+//     if (isUnique) {
+//       sum += arr[i];
+//     }
+//   }
+//   return sum;
+// }
+// // Example usage
+// const array = [1, 2, 3, 4, 2, 3, 5];
+// const result = sumOfUniqueElements(array);
+// console.log(result); 
+// const x = {a: 1,
+//    b: [4,9], 
+//    c: {d: "ref"}}; 
+//    const y = {...x};
+//     y.b[1] = 10;
+//      x.c.d = -false; 
+//      console.log(typeof x.c.d, x.b);
+// set and map
+// function sumofcommon(array){
+// let newSet= new Set(array)
+// let hwloo = [...newSet]
+// let sum=hwloo.reduce((acc,curr)=>{
+//   return acc+curr
+// },0)
+// console.log(sum);
+// }
+// let array=[1,2,3,4,5,2,4,1]
+// sumofcommon(array)
+// sum of unique numbers
+// function sumofunique(array){
+// let Newmap = new Map()
+// let array1=0
+// for(let i=0;i<array.length;i++){
+//   if(Newmap.has(array[i])){
+//     Newmap.set(array[i], Newmap.get(array[i]) + 1);
+//   }else{
+//     Newmap.set(array[i], 1);
+//   }
+// }
+// for (const [key, value] of Newmap) {
+//   if (value === 1) {
+//     array1+=key
+//   }
+// }
+// return array1
+// }
+// let array=[1,2,1,2,3,4,]
+// console.log(sumofunique(array));
+// var twoOutOfThree = function(nums1, nums2, nums3) {
+//   let set = new Set(nums1),
+//    res = new Set();
+//   nums1 = new Set();
+//   for(let num of nums2) {
+//       if(set.has(num)) res.add(num);
+//       nums1.add(num);
+//   }
+//   console.log(res,nums1,set);
+//   for(let num of nums3) {
+//       if(set.has(num) || nums1.has(num)) res.add(num);
+//   }
+//   return [...res];
+// };
+// let num1=[1,1,3,2];
+// let nums2 = [2,3];
+// let  nums3 = [3]
+// console.log(twoOutOfThree(num1,nums2,nums3));
+// var firstPalindrome = function(words) {
+//   for(let i=0;i<words.length;i++){
+//     palindrome(words[i])
+//   }
+//     function palindrome(word){
+//     let word1=word.reverse()
+//     if(word===word1){
+//       return word
+//     }
+//     }
+// }
+// let words = ["abc","car","ada","racecar","cool"]
+
+
