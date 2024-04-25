@@ -108,22 +108,92 @@
 //  let  k = 2
 //  console.log(divideArray(nums,k));
 
-var intersection = function(nums1, nums2) {
-let Array1=[]
-    let newSet1= new Set(nums1)
-    let newSet2= new Set(nums2)
-    // if(newSet1.has(newSet2)){
-        for( item of newSet1){
-            if(newSet2.has(item)){
-                Array1.push(item)
+// var intersection = function(nums1, nums2) {
+// let Array1=[]
+//     let newSet1= new Set(nums1)
+//     let newSet2= new Set(nums2)
+//     // if(newSet1.has(newSet2)){
+//         for( item of newSet1){
+//             if(newSet2.has(item)){
+//                 Array1.push(item)
+//             }
+//         }
+//         return Array1
+//     }
+// let nums1 = [1,2,2,1];
+//  let nums2 = [2,2];
+
+// console.log(intersection(nums1,nums2));
+// function firstUniqChar(s) {
+//     // Create a map to store character counts
+//     let charCount = {};
+
+//     // Iterate through the string and count each character
+//     for (let char of s) {
+//         charCount[char] = (charCount[char] || 0) + 1;
+//     }
+// console.log(charCount);
+//     // Iterate through the string again to find the index of the first non-repeating character
+//     for (let i = 0; i < s.length; i++) {
+        
+//         if (charCount[s[i]] === 1) {
+//             console.log(charCount[s[i]]);
+//             return i;
+//         }
+//     }
+
+//     // If no non-repeating character is found, return -1
+//     return -1;
+// }
+// // Test the function
+// let s = "leetcode";
+// console.log(firstUniqChar(s)); // Output: 0
+
+//question no 389
+// var findTheDifference = function(s, t) {
+//     let array = [...t, ...s];
+//     let map1 = new Map();
+//     for (item of array) {
+//         if (map1.has(item)) {
+//             map1.set(item, map1.get(item) + 1); 
+//         } else {
+//             map1.set(item, 1);
+//         }
+//     }
+//     for (let [key, value] of map1) {
+//         if (value === 1) {
+//             return key;
+//         }
+//     }
+// };
+
+// let s = "abcd";
+// let t = "abcde";
+// console.log(findTheDifference(s, t)); // Output: e
+
+var findTheDifference = function(s, t) {
+    let charCount = new Map();
+        for (let char of s) {
+        charCount.set(char, (charCount.get(char)|| 0) + 1);
+    }
+    console.log(charCount,"cahaa");
+    for (let char of t) {
+        if (charCount.has(char)) {
+            console.log(charCount);
+            charCount.set(char, charCount.get(char) - 1);
+        } else {
+            console.log(char);
+            return char;
+        }
+    }
+    for (let [char, count] of charCount) {
+            console.log([char, count]);
+            if (count < 0) {
+                return char;
             }
         }
-        return Array1
+};
+// Test cases
+let s1 = "abcd", t1 = "abcde";
+console.log(findTheDifference(s1, t1)); // Output: "e"
 
-    }
-
-
-let nums1 = [1,2,2,1];
- let nums2 = [2,2];
-
-console.log(intersection(nums1,nums2));
