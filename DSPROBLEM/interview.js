@@ -171,29 +171,50 @@
 // let t = "abcde";
 // console.log(findTheDifference(s, t)); // Output: e
 
-var findTheDifference = function(s, t) {
-    let charCount = new Map();
-        for (let char of s) {
-        charCount.set(char, (charCount.get(char)|| 0) + 1);
-    }
-    console.log(charCount,"cahaa");
-    for (let char of t) {
-        if (charCount.has(char)) {
-            console.log(charCount);
-            charCount.set(char, charCount.get(char) - 1);
-        } else {
-            console.log(char);
-            return char;
-        }
-    }
-    for (let [char, count] of charCount) {
-            console.log([char, count]);
-            if (count < 0) {
-                return char;
-            }
-        }
-};
-// Test cases
-let s1 = "abcd", t1 = "abcde";
-console.log(findTheDifference(s1, t1)); // Output: "e"
+// var findTheDifference = function(s, t) {
+//     let charCount = new Map();
+//         for (let char of s) {
+//         charCount.set(char, (charCount.get(char)|| 0) + 1);
+//     }
+//     console.log(charCount,"cahaa");
+//     for (let char of t) {
+//         if (charCount.has(char)) {
+//             console.log(charCount);
+//             charCount.set(char, charCount.get(char) - 1);
+//         } else {
+//             console.log(char);
+//             return char;
+//         }
+//     }
+//     for (let [char, count] of charCount) {
+//             console.log([char, count]);
+//             if (count < 0) {
+//                 return char;
+//             }
+//         }
+// };
+// // Test cases
+// let s1 = "abcd", t1 = "abcde";
+// console.log(findTheDifference(s1, t1)); // Output: "e"
 
+// find the biggest product in 3 numbers
+
+// function maximumproduct(x,y,z){
+
+// let array =[x,y,z]    
+// array.sort((b,a)=>a-b)
+//  return x*y*z
+// }
+// console.log(maximumproduct(2,3,4));
+
+// function maximumProduct(x, y, z) {
+//     // Find maximum product of three numbers
+//     const product1 = x * y * z; // Product of all three numbers
+
+//     // Product of two largest numbers and the smallest number
+//     const product2 = Math.max(x, y) * Math.max(y, z) * Math.min(x, y, z);
+
+//     return Math.max(product1, product2);
+// }
+
+// console.log(maximumProduct(2, 3, 4));
